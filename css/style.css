@@ -1,9 +1,7 @@
 @font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon/icomoon.eot?srf3rx");
-  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Gotham';
+  src: url('http://fonts.cdnfonts.com/css/gotham');
+  
 }
 /* =======================================================
 *
@@ -374,7 +372,7 @@ h1, h2, h3, h4, h5, h6 {
   background-attachment: fixed;
   position: relative;
   width: 100%;
-  background-color: #52d3aa;
+  background-color: #000000;
   color: #fff;
   overflow: hidden;
 }
@@ -424,9 +422,12 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px dashed white;
 }
 #fh5co-home .text-inner h1 {
-  font-size: 50px;
+  font-size: 65px;
   color: white;
   margin: 0 0 20px 0;
+  text-align: initial;
+  max-width: 620px;
+  font-weight: 700;
 }
 #fh5co-home .text-inner h2 {
   font-size: 28px;
@@ -434,6 +435,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
+  text-align: initial ;
 }
 
 .slant {
@@ -477,7 +479,7 @@ h1, h2, h3, h4, h5, h6 {
   -moz-flex-wrap: wrap;
 }
 #fh5co-intro .fh5co-block {
-  width: 33.33%;
+  width: 29.33%;
   float: left;
   text-align: center;
   font-size: 16px;
@@ -494,7 +496,9 @@ h1, h2, h3, h4, h5, h6 {
   flex-grow: 1;
   background-size: cover;
   position: relative;
-  backgroun-repeat: no-repeat;
+  background-repeat: no-repeat;
+  margin: 0 15px;
+  height: 100%;
 }
 @media screen and (max-width: 768px) {
   #fh5co-intro .fh5co-block {
@@ -1375,7 +1379,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .row-bottom-padded-lg {
-  padding-bottom: 7em;
+  padding-bottom: 0em;
 }
 @media screen and (max-width: 768px) {
   .row-bottom-padded-lg {
