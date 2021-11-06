@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   opacity: 1;
   top: 0;
-  margin-top: 40px;
+  margin-top: 7px;
   box-shadow: 1px 12px 20px -10px rgb(113 113 113 / 18%);
 -webkit-box-shadow: 1px 12px 20px -10px rgb(113 113 113 / 18%);
 -moz-box-shadow: 11px 12px 20px -10px rgb(113 113 113 / 18%);
@@ -315,9 +315,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
   top: 0;
 }
-#fh5co-header.navbar-fixed-top .navbar-brand {
-  color: #52d3aa;
-}
+
 #fh5co-header.navbar-fixed-top #navbar li a {
   color: rgba(126, 124, 124, 0.5);
   -webkit-transition: 0.3s;
@@ -325,18 +323,18 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
 }
 #fh5co-header.navbar-fixed-top #navbar li a:hover {
-  color: #52d3aa;
+  color: #FF6B00;
 }
 #fh5co-header.navbar-fixed-top #navbar li.active a {
   background: transparent;
   background: none;
-  color: #52d3aa;
+  color: #FF6B00;
 }
 #fh5co-header.navbar-fixed-top #navbar li.active a span:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
-  background-color: #52d3aa;
+  background-color: #FF6B00;
 }
 #fh5co-header .navbar-default {
   border: transparent;

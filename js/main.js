@@ -197,7 +197,7 @@
 							},  k * 200, 'easeInOutExpo' );
 							
 						});
-					}, 1000);
+					}, 500);
 
 					
 					$(this.element).addClass('animated');
