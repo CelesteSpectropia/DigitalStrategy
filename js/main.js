@@ -197,7 +197,7 @@
 							},  k * 200, 'easeInOutExpo' );
 							
 						});
-					}, 500);
+					}, 300);
 
 					
 					$(this.element).addClass('animated');
@@ -294,6 +294,119 @@
 							var el = $(this);
 							
 							setTimeout ( function () {
+								el.addClass('fadeInRight animated');
+							},  k * 200, 'easeInOutExpo' );
+							
+						});
+					}, 200);
+
+					
+					$(this.element).addClass('animated');
+						
+				}
+			} , { offset: '80%' } );
+
+		}
+	};
+
+	var dgAnimate = function() {
+		if ( $('#fh5co-dg').length > 0 ) {	
+
+			$('#fh5co-dg').waypoint( function( direction ) {
+										
+				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+
+
+					setTimeout(function() {
+						$('#fh5co-dg .to-animate').each(function( k ) {
+							var el = $(this);
+							
+							setTimeout ( function () {
+								el.addClass('fadeInUp animated');
+							},  k * 200, 'easeInOutExpo' );
+							
+						});
+					}, 200);
+
+					
+					$(this.element).addClass('animated');
+						
+				}
+			} , { offset: '80%' } );
+
+		}
+	};
+
+
+	var dwAnimate = function() {
+		if ( $('#fh5co-dw').length > 0 ) {	
+
+			$('#fh5co-dw').waypoint( function( direction ) {
+										
+				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+
+
+					setTimeout(function() {
+						$('#fh5co-dw .to-animate').each(function( k ) {
+							var el = $(this);
+							
+							setTimeout ( function () {
+								el.addClass('fadeInUp animated');
+							},  k * 200, 'easeInOutExpo' );
+							
+						});
+					}, 200);
+
+					
+					$(this.element).addClass('animated');
+						
+				}
+			} , { offset: '80%' } );
+
+		}
+	};
+
+	var cmAnimate = function() {
+		if ( $('#fh5co-cm').length > 0 ) {	
+
+			$('#fh5co-cm').waypoint( function( direction ) {
+										
+				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+
+
+					setTimeout(function() {
+						$('#fh5co-cm .to-animate').each(function( k ) {
+							var el = $(this);
+							
+							setTimeout ( function () {
+								el.addClass('fadeInUp animated');
+							},  k * 200, 'easeInOutExpo' );
+							
+						});
+					}, 200);
+
+					
+					$(this.element).addClass('animated');
+						
+				}
+			} , { offset: '80%' } );
+
+		}
+	};
+
+	var icAnimate = function() {
+		if ( $('#fh5co-ic').length > 0 ) {	
+
+			$('#fh5co-ic').waypoint( function( direction ) {
+										
+				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+
+
+					setTimeout(function() {
+						$('#fh5co-ic .to-animate').each(function( k ) {
+							var el = $(this);
+							
+							setTimeout ( function () {
 								el.addClass('fadeInUp animated');
 							},  k * 200, 'easeInOutExpo' );
 							
@@ -336,6 +449,68 @@
 		}
 	};
 
+	//PORTFOLIO NAV
+
+	// Page Nav
+	var clickMenu2 = function() {
+
+		$('#navbar2 a:not([class="external"])').click(function(event){
+			var section = $(this).data('nav-section'),
+				navbar = $('#navbar2');
+
+				if ( $('[data-section="' + section + '"]').length ) {
+			    	$('html, body').animate({
+			        	scrollTop: $('[data-section="' + section + '"]').offset().top
+			    	}, 500);
+			   }
+
+		    if ( navbar.is(':visible')) {
+		    	navbar.removeClass('in');
+		    	navbar.attr('aria-expanded', 'false');
+		    	$('.js-fh5co-nav-toggle').removeClass('active');
+		    }
+
+		    event.preventDefault();
+		    return false;
+		});
+
+
+	};
+
+	
+	var navActive2 = function(section) {
+
+		var $el = $('#navbar2 > ul');
+		$el.find('li').removeClass('active');
+		$el.each(function(){
+			$(this).find('a[data-nav-section="'+section+'"]').closest('li').addClass('active');
+		});
+
+	};
+
+	var navigationSection2 = function() {
+
+		var $section = $('section[data-section]');
+		
+		$section.waypoint(function(direction) {
+		  	
+		  	if (direction === 'down') {
+		    	navActive2($(this.element).data('section'));
+		  	}
+		}, {
+	  		offset: '150px'
+		});
+
+		$section.waypoint(function(direction) {
+		  	if (direction === 'up') {
+		    	navActive2($(this.element).data('section'));
+		  	}
+		}, {
+		  	offset: function() { return -$(this.element).height() + 155; }
+		});
+
+	};
+
 
 
 	
@@ -364,10 +539,12 @@
 		burgerMenu();
 
 		clickMenu();
+		clickMenu2();
 
 		windowScroll();
 
 		navigationSection();
+		navigationSection2();
 
 		goToTop();
 
@@ -378,6 +555,10 @@
 		aboutAnimate();
 		servicesAnimate();
 		workAnimate();
+		dgAnimate();
+		dwAnimate();
+		cmAnimate();
+		icAnimate();
 		
 		
 		
