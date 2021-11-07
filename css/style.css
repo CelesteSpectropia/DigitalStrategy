@@ -625,10 +625,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #fh5co-services  .fh5co-intro-icon {
   font-size: 50px;
-  margin-bottom: 30px;
   display: block;
-  width: 135px;
-  margin: 27px auto;
+  width: 77px;
+  margin: 15px 0;
 }
 
 
@@ -777,6 +776,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 #fh5co-work .fh5co-project-item:hover h2, #fh5co-work .fh5co-project-item:hover span, #fh5co-work .fh5co-project-item:focus h2, #fh5co-work .fh5co-project-item:focus span {
   text-decoration: none !important;
+}
+
+.work-number {
+  font-size: 5rem;
+  color: #FF6B00;
+  stroke-width: 2px;
+  
 }
 
 
@@ -1179,7 +1185,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 30px 0;
       font-size: 50px;
       font-weight: 300;
-      color: #ff6c01;
+      color: #000000;
       text-transform: uppercase;
       position: relative;
       display: block;
@@ -1193,7 +1199,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 278px;
   height: 5px;
-  background: #ff6c01;
+  background: #000000;
   left: 3%;
   margin-left: -40px;
   bottom: 19px;
@@ -1217,7 +1223,7 @@ h1, h2, h3, h4, h5, h6 {
 .section-heading h3 {
   font-weight: 300;
   line-height: 1.5;
-  color: #929292;
+  color: #000000;
   max-width: 490px;
 }
 @media screen and (max-width: 768px) {
