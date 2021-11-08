@@ -386,9 +386,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 #fh5co-home .text-inner {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: baseline;
   text-align: center;
+  padding-top: 95px;
 }
+
 #fh5co-home .text-inner a {
   color: white;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
@@ -418,6 +420,30 @@ h1, h2, h3, h4, h5, h6 {
   text-align: initial ;
 }
 
+.illustration-home {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .home-banner {
+    flex-direction: column-reverse;
+  }
+
+  .illustration-home {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
 .slant {
   position: absolute;
   transform: rotate(-1.7deg);
@@ -441,7 +467,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   margin-top: -150px;
   z-index: 10;
-  padding-bottom: 7em;
+  
 }
 @media screen and (max-width: 768px) {
   #fh5co-intro {
@@ -528,6 +554,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #FF6B00;
 }
 
+#fh5co-about  {
+  background-image: url(/images/grid_bg.png);
+  background-position: 800px;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  /* background-blend-mode: color-burn; */
+}
+
+
 
 
 
@@ -537,6 +572,11 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
   #fh5co-services, #fh5co-testimonials, #fh5co-counters, #fh5co-work, #fh5co-contact, #fh5co-about {
     padding: 2em 0;
+  }
+
+  #fh5co-about{
+    background-position: -112px;
+    background-size: auto;
   }
 }
 
@@ -1132,15 +1172,16 @@ h1, h2, h3, h4, h5, h6 {
 .form-control {
   box-shadow: none;
   background: transparent;
-  border: 2px solid #FF6B00;
+  border: 2px solid #000;
   height: 54px;
   font-size: 18px;
   font-weight: 400;
+  color: #f9f6f0;
 }
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #52d3aa;
+  border-color: #f9f6f0;
 }
 
 .btn {
