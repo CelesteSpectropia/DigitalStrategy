@@ -235,20 +235,24 @@
 					<h2 class="left-border to-animate"><span class="work-number">01</span>Diseño Gráfico</h2>
 					<div class="row">
 						<div class="dg-container to-animate ">
+
+							<div class="wrapper-title-btn">
 							<p>Creamos tu logotipo y todas sus
 								adaptaciones. Además, te entregamos
 								un manual de marca con
 								la identidad visual.</p>
 							<ul class="button-list">
-								<li><button><span class="button-slanted-content">LOGOTIPO</span></button></li>
-								<li><button><span class="button-slanted-content">TIPOGRAFÍAS</span></button></li>
-								<li><button><span class="button-slanted-content">PALETA CROMÁTICA</span></button></li>
+								<li><button id="btn1"><span class="button-slanted-content">LOGOTIPO</span></button></li>
+								<li><button id="btn2"><span class="button-slanted-content">TIPOGRAFÍAS</span></button></li>
+								<li><button id="btn3"><span class="button-slanted-content">PALETA CROMÁTICA</span></button></li>
 							</ul>
 
+						</div>
+
 							<div id="dgSlider" class="img-carrousel">
-								<img src="images/PLACA LOGOS- DISEÑO GRÁFICO_Mesa de trabajo 1_Mesa de trabajo 1.jpg" alt="logos" id="placaLogo">
-								<img src="images/PLACA PALETA CROMÁTICA - DISEÑO GRÁFICO_Mesa de trabajo 1.jpg" alt="colors" id="placaPaleta">
-								<img src="images/PLACA TIPOGRAFIA - DISEÑO GRÁFICO_Mesa de trabajo 1.jpg" alt="typo" id="placaTypo">
+								<img  src="images/PLACA LOGOS- DISEÑO GRÁFICO_Mesa de trabajo 1_Mesa de trabajo 1.jpg" alt="logos" id="placaLogo">
+								<img style="display: none;" src="images/PLACA PALETA CROMÁTICA - DISEÑO GRÁFICO_Mesa de trabajo 1.jpg" alt="colors" id="placaPaleta">
+								<img style="display: none;" src="images/PLACA TIPOGRAFIA - DISEÑO GRÁFICO_Mesa de trabajo 1.jpg" alt="typo" id="placaTypo">
 							</div>
 							
 						</div>
@@ -514,6 +518,30 @@
 
 
 				})
+
+
+				$('#btn1').click(function (e) {
+				e.stopPropagation();
+				$('#placaLogo').show();
+				$('#placaPaleta').hide();
+				$('#placaTypo').hide();
+			});
+				$('#btn2').click(function (e) {
+				e.stopPropagation();
+				$('#placaTypo').show();
+				$('#placaLogo').hide();
+				$('#placaPaleta').hide();
+				
+			});
+				$('#btn3').click(function (e) {
+				e.stopPropagation();
+				$('#placaPaleta').show();
+				$('#placaTypo').hide();
+				$('#placaLogo').hide();
+				
+});
+
+
 	</script>
 
 	</body>
