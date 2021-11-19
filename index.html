@@ -28,7 +28,8 @@
 	
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
+
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
 	
 	<link rel="stylesheet" href="css/style.css">
@@ -324,33 +325,95 @@
 							<p>Creamos tanto posteos para el feed, como historias.
 								Ya sea para marcas personales o empresas.</p>
 								<ul class="button-list">
-									<li><button><span class="button-slanted-content">HISTORIAS</span></button></li>
-									<li><button><span class="button-slanted-content">POSTEOS</span></button></li>
+									<li><button id="btnStories"><span class="button-slanted-content">HISTORIAS</span></button></li>
+									<li><button id="btnFeed"><span class="button-slanted-content">POSTEOS</span></button></li>
 								</ul>
 
 								<div class="logo-minar">
 									<img src="/images/logo hora de minar-06.png" style="max-width: 150px;" alt="">
 								</div>
+								
+								<div id="wrapper1" class="wrapper-slider">
 
-								<div class="owl-carousel owl-1">
-									<div class="slide">
-									<img src="/images/Historia + info housing-09 (1).jpg" alt="">
-								</div>
-								<div class="slide">
-									<img src="/images/Historia Envíos-19 (1).jpg" alt="">
-								</div>
-									
-							  </div>
-
-
+									<div class="container">
+										<div class="slider">
+										  <img class=" slide active" src="images/Historia + info housing-09 (1).jpg">
+										  <img class="slide" src="images/Historia Envíos-19 (1).jpg">
+										  <img class="slide"  src="images/Historia oficinas-15.jpg">
+										  <img class="slide"  src="images/Historia precio dolar-11.jpg">
+										  <img class="slide"  src="images/Historia Reunion.jpg">
+										  <img class="slide"  src="images/Historia rigs 1660-13.jpg">
+										  <img class="slide"  src="images/Historia rigs 3070-13.jpg">
+										  <img class="slide"  src="images/Historia rigs 3090-13-13.jpg">
+										  
+										</div>
+										<nav class="slider-nav">
+										  <ul>
+											<li class="arrow">
+											  <button class="previous">
+												<span>
+												  <i class="ion-arrow-left-c"></i>
+												</span>
+											  </button>
+											</li>
+											<li class="arrow">
+											  <button class="next">
+												<span>
+												  <i class="ion-arrow-right-c"></i>
+												</span>
+											  </button>
+											</li>
+										  </ul>
+										</nav>
+									  </div>
 
 								
-						
-						
-
-									<div class="gif-phone">
+							<div class="gif-phone">
 										<img src="/images/storie_gif.gif" alt="">
 									</div>
+
+								</div>
+
+								<div id="wrapper2" class="wrapper-slider" style="display: none;" >
+
+									<div class="container">
+										<div class="slider">
+										  <img class=" slide2 active" src="images/1-02.jpg">
+										  <img class=" slide2" src="images/1-03.jpg">
+										  <img class="slide2"  src="images/1-04.jpg">
+										  <img class="slide2"  src="images/1-05.jpg">
+										  <img class="slide2"  src="images/1_Mesa de trabajo 1.jpg">
+										  <img class="slide2"  src="images//2-02.jpg">
+										  <img class="slide2"  src="images//2-03.jpg">
+										  <img class="slide2"  src="images/2-04.jpg">
+										  
+										</div>
+										<nav class="slider-nav">
+										  <ul>
+											<li class="arrow">
+											  <button class="previous previous2">
+												<span>
+												  <i class="ion-arrow-left-c"></i>
+												</span>
+											  </button>
+											</li>
+											<li class="arrow">
+											  <button class="next next2">
+												<span>
+												  <i class="ion-arrow-right-c"></i>
+												</span>
+											  </button>
+											</li>
+										  </ul>
+										</nav>
+									  </div>
+
+								
+							<div class="gif-phone">
+										<img src="/images/feed-gif.gif" alt="">
+									</div>
+
+								</div>
 
 								</div>
 
@@ -359,9 +422,9 @@
 									  
 
 
-									  <div class="gif-phone">
+									  <!-- <div class="gif-phone">
 										<img src="/images/feed-gif.gif" alt="">
-									</div>
+									</div> -->
 
 								</div>
 
@@ -473,7 +536,7 @@
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<ul class="social social-circle">
-						<li><a href="#"><i class="icon-instagram "></i></a>/digitalstrategy.usa</li>
+						<li><a href="https://www.instagram.com/digitalstrategy.usa/"><i class="icon-instagram "></i></a>/digitalstrategy.usa</li>
 					</ul>
 				</div>
 			</div>
@@ -490,7 +553,6 @@
 	<script src="js/jquery.waypoints.min.js"></script>
 	<script src="js/jquery.stellar.min.js"></script>
 	<script type="text/javascript" src="js/validator.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/popper.min.js"></script>
 
 
@@ -502,22 +564,7 @@
 
 	<script>
 
-				$(function() {
-
-				$('.owl-1').owlCarousel({
-
-				loop:true,
-				margin:0,
-				nav:true,
-				items: 1,
-				smartSpeed: 1000,
-				autoplay: true,
-				autoplayHoverPause: true,
-				navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
-				})
-
-
-				})
+				
 
 
 				$('#btn1').click(function (e) {
@@ -540,6 +587,121 @@
 				$('#placaLogo').hide();
 				
 });
+
+
+
+				const items = document.querySelectorAll('.slide');
+				const itemCount = items.length;
+				const nextItem = document.querySelector('.next');
+				const previousItem = document.querySelector('.previous');
+				let count = 0;
+
+				function showNextItem() {
+				items[count].classList.remove('active');
+
+				if(count < itemCount - 1) {
+					count++;
+				} else {
+					count = 0;
+				}
+
+				items[count].classList.add('active');
+				console.log(count);
+				}
+
+				function showPreviousItem() {
+				items[count].classList.remove('active');
+
+				if(count > 0) {
+					count--;
+				} else {
+					count = itemCount - 1;
+				}
+
+				items[count].classList.add('active');
+				console.log(count);
+				}
+
+				function keyPress(e) {
+				e = e || window.event;
+				
+				if (e.keyCode == '37') {
+					showPreviousItem();
+				} else if (e.keyCode == '39') {
+					showNextItem();
+				}
+				}
+
+				nextItem.addEventListener('click', showNextItem);
+				previousItem.addEventListener('click', showPreviousItem);
+				document.addEventListener('keydown', keyPress);
+
+
+
+
+
+				const items2 = document.querySelectorAll('.slide2');
+				const itemCount2 = items2.length;
+				const nextItem2 = document.querySelector('.next2');
+				const previousItem2 = document.querySelector('.previous2');
+				let count2 = 0;
+
+				function showNextItem() {
+				items2[count2].classList.remove('active');
+
+				if(count2 < itemCount2 - 1) {
+					count2++;
+				} else {
+					count2 = 0;
+				}
+
+				items2[count2].classList.add('active');
+				console.log(count2);
+				}
+
+				function showPreviousItem() {
+				items2[count2].classList.remove('active');
+
+				if(count2 > 0) {
+					count2--;
+				} else {
+					count2 = itemCount2 - 1;
+				}
+
+				items2[count2].classList.add('active');
+				console.log(count2);
+				}
+
+				function keyPress(e) {
+				e = e || window.event;
+				
+				if (e.keyCode == '37') {
+					showPreviousItem();
+				} else if (e.keyCode == '39') {
+					showNextItem();
+				}
+				}
+
+				nextItem2.addEventListener('click', showNextItem);
+				previousItem2.addEventListener('click', showPreviousItem);
+				document.addEventListener('keydown', keyPress);
+
+
+				$('#btnStories').click(function (e) {
+				e.stopPropagation();
+				$('#wrapper1').show();
+				$('#wrapper2').hide();
+			});
+				$('#btnFeed').click(function (e) {
+				e.stopPropagation();
+				$('#wrapper2').show();
+				$('#wrapper1').hide();
+				
+			});
+
+
+
+				
 
 
 	</script>
