@@ -382,6 +382,7 @@
 
 									<div class="container">
 										<div class="slider">
+<<<<<<< HEAD
 										  <img class=" slide2 active" src="images/102.jpg">
 										  <img class=" slide2" src="images/103.jpg">
 										  <img class="slide2"  src="images/104.jpg">
@@ -390,6 +391,16 @@
 										  <img class="slide2"  src="images//202.jpg">
 										  <img class="slide2"  src="images//203.jpg">
 										  <img class="slide2"  src="images/204.jpg">
+=======
+										  <img class=" slide2 active2" src="images/1-02.jpg">
+										  <img class=" slide2" src="images/1-03.jpg">
+										  <img class="slide2"  src="images/1-04.jpg">
+										  <img class="slide2"  src="images/1-05.jpg">
+										  <img class="slide2"  src="images/1_Mesa de trabajo 1.jpg">
+										  <img class="slide2"  src="images//2-02.jpg">
+										  <img class="slide2"  src="images//2-03.jpg">
+										  <img class="slide2"  src="images/2-04.jpg">
+>>>>>>> a80e08bd0db175c9320545ba6b57d24d90dddbf2
 										  
 										</div>
 										<nav class="slider-nav">
@@ -587,114 +598,7 @@
 
 
 
-				const items = document.querySelectorAll('.slide');
-				const itemCount = items.length;
-				const nextItem = document.querySelector('.next');
-				const previousItem = document.querySelector('.previous');
-				let count = 0;
-
-				function showNextItem() {
-				items[count].classList.remove('active');
-
-				if(count < itemCount - 1) {
-					count++;
-				} else {
-					count = 0;
-				}
-
-				items[count].classList.add('active');
-				console.log(count);
-				}
-
-				function showPreviousItem() {
-				items[count].classList.remove('active');
-
-				if(count > 0) {
-					count--;
-				} else {
-					count = itemCount - 1;
-				}
-
-				items[count].classList.add('active');
-				console.log(count);
-				}
-
-				function keyPress(e) {
-				e = e || window.event;
 				
-				if (e.keyCode == '37') {
-					showPreviousItem();
-				} else if (e.keyCode == '39') {
-					showNextItem();
-				}
-				}
-
-				nextItem.addEventListener('click', showNextItem);
-				previousItem.addEventListener('click', showPreviousItem);
-				document.addEventListener('keydown', keyPress);
-
-
-
-
-
-				const items2 = document.querySelectorAll('.slide2');
-				const itemCount2 = items2.length;
-				const nextItem2 = document.querySelector('.next2');
-				const previousItem2 = document.querySelector('.previous2');
-				let count2 = 0;
-
-				function showNextItem() {
-				items2[count2].classList.remove('active');
-
-				if(count2 < itemCount2 - 1) {
-					count2++;
-				} else {
-					count2 = 0;
-				}
-
-				items2[count2].classList.add('active');
-				console.log(count2);
-				}
-
-				function showPreviousItem() {
-				items2[count2].classList.remove('active');
-
-				if(count2 > 0) {
-					count2--;
-				} else {
-					count2 = itemCount2 - 1;
-				}
-
-				items2[count2].classList.add('active');
-				console.log(count2);
-				}
-
-				function keyPress(e) {
-				e = e || window.event;
-				
-				if (e.keyCode == '37') {
-					showPreviousItem();
-				} else if (e.keyCode == '39') {
-					showNextItem();
-				}
-				}
-
-				nextItem2.addEventListener('click', showNextItem);
-				previousItem2.addEventListener('click', showPreviousItem);
-				document.addEventListener('keydown', keyPress);
-
-
-				$('#btnStories').click(function (e) {
-				e.stopPropagation();
-				$('#wrapper1').show();
-				$('#wrapper2').hide();
-			});
-				$('#btnFeed').click(function (e) {
-				e.stopPropagation();
-				$('#wrapper2').show();
-				$('#wrapper1').hide();
-				
-			});
 
 
 

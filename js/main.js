@@ -58,6 +58,117 @@
 	
 	};
 
+	//sliders
+
+				const items = document.querySelectorAll('.slide');
+				const itemCount = items.length;
+				const nextItem = document.querySelector('.next');
+				const previousItem = document.querySelector('.previous');
+				let count = 0;
+
+				function showNextItem() {
+				items[count].classList.remove('active');
+
+				if(count < itemCount - 1) {
+					count++;
+				} else {
+					count = 0;
+				}
+
+				items[count].classList.add('active');
+				console.log(count);
+				}
+
+				function showPreviousItem() {
+				items[count].classList.remove('active');
+
+				if(count > 0) {
+					count--;
+				} else {
+					count = itemCount - 1;
+				}
+
+				items[count].classList.add('active');
+				console.log(count);
+				}
+
+				function keyPress(e) {
+				e = e || window.event;
+				
+				if (e.keyCode == '37') {
+					showPreviousItem();
+				} else if (e.keyCode == '39') {
+					showNextItem();
+				}
+				}
+
+				nextItem.addEventListener('click', showNextItem);
+				previousItem.addEventListener('click', showPreviousItem);
+				document.addEventListener('keydown', keyPress);
+
+
+
+
+
+				const items2 = document.querySelectorAll('.slide2');
+				const itemCount2 = items2.length;
+				const nextItem2 = document.querySelector('.next2');
+				const previousItem2 = document.querySelector('.previous2');
+				let count2 = 0;
+
+				function showNextItem2() {
+				items2[count2].classList.remove('active');
+
+				if(count2 < itemCount2 - 1) {
+					count2++;
+				} else {
+					count2 = 0;
+				}
+
+				items2[count2].classList.add('active');
+				console.log(count2);
+				}
+
+				function showPreviousItem2() {
+				items2[count2].classList.remove('active');
+
+				if(count2 > 0) {
+					count2--;
+				} else {
+					count2 = itemCount2 - 1;
+				}
+
+				items2[count2].classList.add('active');
+				console.log(count2);
+				}
+
+				function keyPress(e) {
+				e = e || window.event;
+				
+				if (e.keyCode == '37') {
+					showPreviousItem();
+				} else if (e.keyCode == '39') {
+					showNextItem();
+				}
+				}
+
+				nextItem2.addEventListener('click', showNextItem);
+				previousItem2.addEventListener('click', showPreviousItem);
+				
+
+
+				$('#btnStories').click(function (e) {
+				e.stopPropagation();
+				$('#wrapper1').show();
+				$('#wrapper2').hide();
+			});
+				$('#btnFeed').click(function (e) {
+				e.stopPropagation();
+				$('#wrapper2').show();
+				$('#wrapper1').hide();
+				
+			});
+
 
 	// Page Nav
 	var clickMenu = function() {
@@ -605,6 +716,10 @@
 		navigationSection2();
 
 		goToTop();
+		showNextItem();
+		showPreviousItem();
+		showNextItem2();
+		showPreviousItem2();
 
 
 		// Animations
